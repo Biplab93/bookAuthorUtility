@@ -1,0 +1,35 @@
+{
+  "name": "Author",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "authorId": {
+      "type": "number",
+      "required": true
+    },
+    "books":{
+      "type":"array"
+    },
+    "phoneNo":{
+      "type":"number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "booking":{
+      "type":"hasMany",
+      "model":"Booking",
+      "foreignKey":""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
+
